@@ -47,10 +47,10 @@ The code for this step is contained in the second code cell of the IPython noteb
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of test set is 12630
+* The shape of a traffic sign image is ([ImageSet], 32, 32, 3)
+* The number of unique classes/labels in the data set is 43
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
@@ -123,19 +123,26 @@ The code for calculating the accuracy of the model is located in the ninth cell 
 
 My final model results were:
 * training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 98%% 
+* test set accuracy of 89%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+I first chose the LeNet architecture for classification
 * What were some problems with the initial architecture?
+Some problems involved were that the architecture does no initially accept 32x32 image sets and must be downsized
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+Adding dropout did not effectively grant the best solution. Pooling and convolution were the two solutions used.
 * Which parameters were tuned? How were they adjusted and why?
+The epoch parameter was the only one adjusted.
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+Dropout could be effect with creating a successful model by choosing and removing weights much like a genetic algorithm updating weights based on generation
 
 If a well known architecture was chosen:
 * What architecture was chosen?
+
 * Why did you believe it would be relevant to the traffic sign application?
+
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
